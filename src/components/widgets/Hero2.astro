@@ -21,7 +21,10 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-lime-400 to-green-950 min-h-screen" {...id ? { id } : {}}>
+<section
+  class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-lime-400 to-green-950 min-h-screen"
+  {...id ? { id } : {}}
+>
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
@@ -65,10 +68,10 @@ const {
               </div>
             )
           }
-        <div class="pt-10 space-y-6 m-auto ">
-          <span class="text-white font-bold hover:text-lime-200 block">Supervisados por</span>	
-          <SBS width={200} height={50} />
-        </div>
+          <div class="pt-10 space-y-6 m-auto">
+            <span class="text-white font-bold hover:text-lime-200 block">Supervisados por</span>
+            <SBS width={200} height={50} />
+          </div>
         </div>
         {content && <Fragment set:html={content} />}
       </div>

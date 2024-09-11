@@ -13,7 +13,7 @@
     background-color: var(--aw-color-bg-page);
   }
   .bg-lime {
-    background-color: #B7E400;
+    background-color: #b7e400;
   }
   .text-page {
     color: var(--aw-color-text-page);
@@ -31,11 +31,11 @@
     border-color: #083433;
   }
   .border-lime {
-    border-color: #B7E400;
+    border-color: #b7e400;
   }
   .text-lime {
-    color: #B7E400;
-  } 
+    color: #b7e400;
+  }
   .text-dark-lime {
     color: #083433;
   }

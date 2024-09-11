@@ -13,7 +13,7 @@ export const headerData = {
     {
       text: 'Blog',
       href: getPermalink('/blog'),
-    }
+    },
   ],
   actions: [{ text: 'Ingresar', href: 'https://github.com', target: '_blank' }],
 };

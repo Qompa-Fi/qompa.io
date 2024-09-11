@@ -25,7 +25,12 @@ const metadata = {
 
   <Hero2
     actions={[
-      { variant: 'secondary', target: '_blank', text: 'Regístrate al acceso anticipado ', href: 'https://github.com/onwidget/astrowind' },
+      {
+        variant: 'secondary',
+        target: '_blank',
+        text: 'Regístrate al acceso anticipado ',
+        href: 'https://github.com/onwidget/astrowind',
+      },
       { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
     ]}
     video={{
@@ -34,12 +39,14 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Ni banco <br /> 
+      Ni banco <br />
       Ni fintech <br />
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-semibold text-white">Transformamos a las empresas con soluciones financieras innovadoras basadas en IA.</span>
+      <span class="font-semibold text-white"
+        >Transformamos a las empresas con soluciones financieras innovadoras basadas en IA.</span
+      >
     </Fragment>
 
     <Fragment slot="supported">
@@ -55,7 +62,6 @@ const metadata = {
         }
       </style>
     </Fragment>
-
   </Hero2>
 
   <Hero
