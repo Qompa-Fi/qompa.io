@@ -12,6 +12,9 @@
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
+  .bg-lime {
+    background-color: #B7E400;
+  }
   .text-page {
     color: var(--aw-color-text-page);
   }
@@ -20,13 +23,31 @@
   }
 }
 
+@layer base {
+  .bg-dark-lime {
+    background-color: #083433;
+  }
+  .border-dark-lime {
+    border-color: #083433;
+  }
+  .border-lime {
+    border-color: #B7E400;
+  }
+  .text-lime {
+    color: #B7E400;
+  } 
+  .text-dark-lime {
+    color: #083433;
+  }
+}
+
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-2xl border-gray-400 border bg-transparent font-extrabold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-dark-lime dark:border-dark-lime dark:hover:bg-lime dark:hover:border-slate-800 cursor-pointer;
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary dark:text-lime dark:bg-dark-lime dark:border-dark-lime dark:hover:bg-dark-lime dark:hover:border-lime;
   }
 
   .btn-secondary {
