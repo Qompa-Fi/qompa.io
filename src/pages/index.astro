@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -11,15 +12,51 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Qompa - Ni Banco Ni Fintech',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
+
+  <Hero2
+    actions={[
+      { variant: 'secondary', target: '_blank', text: 'Regístrate al acceso anticipado ', href: 'https://github.com/onwidget/astrowind' },
+      { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
+    ]}
+    video={{
+      id: 'gxBkghlglTg',
+      title: 'Astro just Launched.... Could it be the ultimate web framework?',
+    }}
+  >
+    <Fragment slot="title">
+      Ni banco <br /> 
+      Ni fintech <br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold text-white">Transformamos a las empresas con soluciones financieras innovadoras basadas en IA.</span>
+    </Fragment>
+
+    <Fragment slot="supported">
+      <span class="font-semibold text-white">Supervisados por</span>
+    </Fragment>
+
+    <Fragment slot="video">
+      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+
+  </Hero2>
 
   <Hero
     actions={[
