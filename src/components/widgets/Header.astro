@@ -54,7 +54,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
-  style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
 >
   <div class="absolute inset-0"></div>
   <div
@@ -115,7 +114,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               ) : (
                 <a
                   class:list={[
-                    'dark:text-lime hover:text-link dark:hover:text-lime-500 px-4 py-3 flex items-center',
+                    'dark:text-dark-lime hover:text-link dark:hover:text-lime-500 px-4 py-3 flex items-center',
                     { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}

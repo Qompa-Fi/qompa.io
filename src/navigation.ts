@@ -3,6 +3,10 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'Inicio',
+      href: getPermalink('/'),
+    },
+    {
       text: 'Nosotros',
       href: getPermalink('/about'),
     },
@@ -15,7 +19,7 @@ export const headerData = {
       href: getPermalink('/blog'),
     },
   ],
-  actions: [{ text: 'Ingresar', href: 'https://github.com', target: '_blank' }],
+  actions: [{ text: 'Regístrate', href: 'https://github.com', target: '_blank' },{ text: 'Iniciar sesión', href: 'https://github.com', target: '_blank' }],
 };
 
 export const footerData = {
