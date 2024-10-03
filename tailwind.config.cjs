@@ -15,8 +15,11 @@ module.exports = {
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
-        heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
+        heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      maxHeight: {
+        '98': '30rem'
+      }
     },
   },
   plugins: [typographyPlugin],
