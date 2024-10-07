@@ -196,6 +196,13 @@ export interface ItemGrid {
   classes?: Record<string, string>;
 }
 
+export interface ImageGrid {
+  items?: Array<Item>;
+  columns?: number;
+  image?: string;
+  classes?: Record<string, string>;
+}
+
 export interface Collapse {
   iconUp?: string;
   iconDown?: string;
@@ -255,6 +262,19 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isAfterContent?: boolean;
 }
 
+export interface Teams extends Omit<Headline, 'classes'>, Widget {
+  image?: string | unknown;
+  video?: Video;
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  callToAction1?: CallToAction;
+  callToAction2?: CallToAction;
+  isReversed?: boolean;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
+}
+
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {
   iconUp?: string;
   iconDown?: string;
@@ -282,6 +302,7 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
   isAfterContent?: boolean;
   callToAction?: CallToAction;
+  textInCard?: boolean;
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}

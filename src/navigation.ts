@@ -8,18 +8,18 @@ export const headerData = {
     },
     {
       text: 'Nosotros',
-      href: getPermalink('/about'),
+      href: getPermalink('/#about'),
     },
     {
       text: 'Planes',
-      href: getPermalink('/pricing'),
+      href: getPermalink('/#pricing'),
     },
     {
       text: 'Blog',
-      href: getPermalink('/blog'),
+      href: getPermalink('/#blog'),
     },
   ],
-  actions: [{ text: 'Regístrate', href: 'https://github.com', target: '_self' }],
+  actions: [{ text: 'Regístrate', href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa', target: '_self' }],
 };
 
 export const footerData = {
@@ -33,19 +33,19 @@ export const footerData = {
     {
       title: '',
       links: [
-        { text: 'Nosotros', href: getPermalink('/about') },
+        { text: 'Nosotros', href: getPermalink('/#about') },
       ],
     },
     {
       title: '',
       links: [
-        { text: 'Planes', href: getPermalink('/pricing') },
+        { text: 'Planes', href: getPermalink('/#pricing') },
       ],
     },
     {
       title: '',
       links: [
-        { text: 'Blog', href: getPermalink('/blog') },
+        { text: 'Blog', href: getPermalink('/#blog') },
       ],
     },
   ],

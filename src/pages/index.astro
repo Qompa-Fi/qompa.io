@@ -7,7 +7,6 @@ import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -31,7 +30,7 @@ const metadata = {
         variant: 'secondary',
         target: '_self',
         text: 'Quiero que me contacten',
-        href: 'https://github.com/onwidget/astrowind',
+        href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
       },
       // { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
     ]}
@@ -98,7 +97,7 @@ const metadata = {
     classes={{container: 'dark:bg-dark-lime'}}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
+      <h2 class="text-5xl font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
       <p class="mt-10 dark:text-white">Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br/>prácticas financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.</p>
     </Fragment>
 
@@ -158,6 +157,7 @@ const metadata = {
   <!-- Pricing Widget ******************* -->
 
   <Prices
+    id="pricing"
     title="Descubre nuestros planes"
     subtitle="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
     isDark={false}
@@ -234,7 +234,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Elegir este plan',
-          href: '#',
+          href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
         },
       },
     ]}
@@ -268,4 +268,55 @@ const metadata = {
       },
     ]}
   />
+  
+  <Content
+    id="blog"
+    isReversed
+    textInCard
+    image={{
+      src: '~/assets/images/image-city.png',
+      alt: 'City',
+    }}
+    classes={{container: 'dark:bg-orange'}}
+  >
+    <Fragment slot="content">
+      <h2 class="text-5xl font-bold tracking-tight dark:text-dark-lime mb-2">¿Cómo nació la<br />idea de Qompa?</h2>
+      <p class="mt-10 dark:text-dark-lime">A mediados del 2023 la gerencia de Inversiones IO decide explorar el mercado de las empresas que ya colaboraban con su dinero para ayudarlos a crecer siendo sus acompañantes</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+  <!-- <Brands
+    title="Contamos con estos aliados"
+    tagline='Descubre quiénes están transformando la<br />manera en la que haces negocios.'
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/prometeo-gray-logo.png',
+        alt: 'Prometeo',
+      },
+      {
+        src: '~/assets/images/truora-gray-logo.png',
+        alt: 'Truora',
+      },
+      {
+        src: '~/assets/images/kin-analytics-gray-logo.png',
+        alt: 'Kin Analytics',
+      },
+
+      {
+        src: '~/assets/images/inversiones-io-gray-logo.png',
+        alt: 'Inversiones.io',
+      },
+      {
+        src: '~/assets/images/abc-capital-gray-logo.png',
+        alt: 'ABC Capital',
+      },
+    ]}
+  /> -->
+  
 </Layout>
