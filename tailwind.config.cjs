@@ -18,8 +18,8 @@ module.exports = {
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
       maxHeight: {
-        '98': '30rem'
-      }
+        98: '30rem',
+      },
     },
   },
   plugins: [typographyPlugin],

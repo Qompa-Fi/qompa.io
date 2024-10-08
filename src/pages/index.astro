@@ -55,7 +55,6 @@ const metadata = {
     <Fragment slot="supported">
       <span class="font-semibold">Supervisados por</span>
     </Fragment>
-
   </Hero2>
 
   <!-- <Hero
@@ -95,11 +94,14 @@ const metadata = {
       src: '~/assets/images/qompa-mascot-1.png',
       alt: 'Qompa Image',
     }}
-    classes={{container: 'dark:bg-dark-lime'}}
+    classes={{ container: 'dark:bg-dark-lime' }}
   >
     <Fragment slot="content">
-      <h2 class="text-5xl font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
-      <p class="mt-10 dark:text-white">Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br/>prácticas financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.</p>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
+      <p class="mt-10 dark:text-white">
+        Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br />prácticas
+        financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -115,7 +117,8 @@ const metadata = {
     items={[
       {
         title: 'Dashboard Interactivo',
-        description: 'Revisa tus ingresos y egresos en un solo lugar para conocer tu liquidez.<br /><br />Obtén gráficos al instante para una mejor toma de desiciones.',
+        description:
+          'Revisa tus ingresos y egresos en un solo lugar para conocer tu liquidez.<br /><br />Obtén gráficos al instante para una mejor toma de desiciones.',
         icon: 'flat-color-icons:template',
         classes: { panel: 'bg-yellow' },
       },
@@ -154,7 +157,6 @@ const metadata = {
     </Fragment>
   </Features2>
 
-
   <!-- Pricing Widget ******************* -->
 
   <Prices
@@ -162,7 +164,7 @@ const metadata = {
     title="Descubre nuestros planes"
     subtitle="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
     isDark={false}
-    classes={{container: 'bg-lime', prices: 'bg-light-gray'}}
+    classes={{ container: 'bg-lime', prices: 'bg-light-gray' }}
     prices={[
       {
         title: 'gratis',
@@ -186,14 +188,14 @@ const metadata = {
           target: '_blank',
           text: 'Elegir este plan',
           href: '#',
-        }
+        },
       },
       {
         title: 'standard',
         price: 30,
         period: 'Por Mes',
         items: [
-        {
+          {
             description: 'Hasta 15 transacciones de pago',
           },
           {

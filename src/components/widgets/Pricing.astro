@@ -21,7 +21,7 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   <div class="flex items-stretch justify-center">
-    <div class="grid grid-cols-3 gap-4  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+    <div class="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {
         prices &&
           prices.map(({ title, subtitle, price, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
@@ -54,7 +54,10 @@ const {
                             description && (
                               <li class="mb-1.5 flex items-start space-x-3 leading-7">
                                 <div class="rounded-full bg-dark-lime mt-1">
-                                  <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5 font-bold p-1 text-dark-lime " />
+                                  <Icon
+                                    name={icon ? icon : 'tabler:check'}
+                                    class="w-5 h-5 font-bold p-1 text-dark-lime "
+                                  />
                                 </div>
                                 <span>{description}</span>
                               </li>

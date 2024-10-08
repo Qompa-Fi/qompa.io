@@ -26,27 +26,19 @@ export const footerData = {
   links: [
     {
       title: '',
-      links: [
-        { text: 'Inicio', href: getPermalink('/') },
-      ],
+      links: [{ text: 'Inicio', href: getPermalink('/') }],
     },
     {
       title: '',
-      links: [
-        { text: 'Nosotros', href: getPermalink('/#about') },
-      ],
+      links: [{ text: 'Nosotros', href: getPermalink('/about') }],
     },
     {
       title: '',
-      links: [
-        { text: 'Planes', href: getPermalink('/#pricing') },
-      ],
+      links: [{ text: 'Planes', href: getPermalink('/pricing') }],
     },
     {
       title: '',
-      links: [
-        { text: 'Blog', href: getPermalink('/#blog') },
-      ],
+      links: [{ text: 'Blog', href: getPermalink('/blog') }],
     },
   ],
   secondaryLinks: [

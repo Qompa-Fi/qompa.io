@@ -13,22 +13,22 @@
     background-color: var(--aw-color-bg-page);
   }
   .bg-light-gray {
-    background-color: #E8E7DE;
+    background-color: #e8e7de;
   }
   .bg-lime {
     background-color: #b7e400;
   }
   .bg-yellow {
-    background-color: #FFE100;
+    background-color: #ffe100;
   }
   .bg-blue {
-    background-color: #4187FF;
+    background-color: #4187ff;
   }
   .bg-pink {
-    background-color: #FF70D3;
+    background-color: #ff70d3;
   }
   .bg-orange {
-    background-color: #FF8200;
+    background-color: #ff8200;
   }
   .text-page {
     color: var(--aw-color-text-page);
@@ -38,13 +38,13 @@
   }
 }
 
-  @font-face {
-    font-family: 'MDNichrome';
-    src: url('/fonts/MDNichromeTest-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
+@font-face {
+  font-family: 'MDNichrome';
+  src: url('/fonts/MDNichromeTest-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   .bg-dark-lime {
