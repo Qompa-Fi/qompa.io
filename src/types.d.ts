@@ -93,6 +93,13 @@ export interface Image {
   alt?: string;
 }
 
+export interface Profile {
+  photo: string;
+  name: string;
+  surname: string;
+  role: string;
+}
+
 export interface Video {
   src: string;
   type?: string;
@@ -247,6 +254,10 @@ export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
 export interface Brands extends Omit<Headline, 'classes'>, Widget {
   icons?: Array<string>;
   images?: Array<Image>;
+}
+
+export interface Portrait extends Omit<Headline, 'classes'>, Widget {
+  people?: Array<Profile>;
 }
 
 export interface Features extends Omit<Headline, 'classes'>, Widget {

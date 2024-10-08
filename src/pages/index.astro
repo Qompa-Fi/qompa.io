@@ -13,6 +13,7 @@ import Content from '~/components/widgets/Content.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import Team from '~/components/widgets/Team.astro';
 // import { YouTube } from 'astro-embed';
 
 const metadata = {
@@ -109,7 +110,7 @@ const metadata = {
 
   <Features2
     title="¿Por qué usar Qompa?"
-    subtitle="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
+    tagline="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
     items={[
       {
         title: 'Dashboard Interactivo',
@@ -158,7 +159,7 @@ const metadata = {
   <Prices
     id="pricing"
     title="Descubre nuestros planes"
-    subtitle="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
+    tagline="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
     isDark={false}
     classes={{ container: 'bg-lime', prices: 'bg-light-gray' }}
     prices={[
@@ -290,33 +291,78 @@ const metadata = {
   />
 
 
-  <!-- <Brands
-    title="Contamos con estos aliados"
-    tagline='Descubre quiénes están transformando la<br />manera en la que haces negocios.'
-    icons={[]}
-    images={[
+  <Team
+    title="Conoce a nuestro equipo"
+    tagline='Descubre quiénes están transformando la<br/ >manera en la que haces negocios.'
+    people={[
       {
-        src: '~/assets/images/prometeo-gray-logo.png',
-        alt: 'Prometeo',
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Simon",
+        surname: "Vacher",
+        role: "CEO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Zoe",
+        surname: "Lopez",
+        role: "CPO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Diana",
+        surname: "Field",
+        role: "Product Designer"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Luis",
+        surname: "Espinoza",
+        role: "CTO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Sergio",
+        surname: "Yep",
+        role: "UX/UI"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Luis",
+        surname: "Quiñones",
+        role: "Sr Backend"
       },
       {
-        src: '~/assets/images/truora-gray-logo.png',
-        alt: 'Truora',
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Facundo",
+        surname: "Marino",
+        role: "Sr Frontend"
       },
       {
-        src: '~/assets/images/kin-analytics-gray-logo.png',
-        alt: 'Kin Analytics',
-      },
-
-      {
-        src: '~/assets/images/inversiones-io-gray-logo.png',
-        alt: 'Inversiones.io',
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Diego",
+        surname: "Gutierrez",
+        role: "Growth Lead"
       },
       {
-        src: '~/assets/images/abc-capital-gray-logo.png',
-        alt: 'ABC Capital',
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Graciela",
+        surname: "Ramirez",
+        role: "Product Designer"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "German",
+        surname: "Goñi",
+        role: "Data Analytics Advisory"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Francesco",
+        surname: " Ucelli",
+        role: "IA Consulting"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "David",
+        surname: "Tramon",
+        role: "Gamification Advisory"
       },
     ]}
-  /> -->
+  />
   
 </Layout>
