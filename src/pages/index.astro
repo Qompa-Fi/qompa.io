@@ -7,14 +7,13 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 // import Features from '~/components/widgets/Features.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-// import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
-// import { YouTube } from 'astro-embed';
+import Team from '~/components/widgets/Team.astro';
 
 const metadata = {
   title: 'Qompa - Ni Banco Ni Fintech',
@@ -31,7 +30,7 @@ const metadata = {
         variant: 'secondary',
         target: '_self',
         text: 'Quiero que me contacten',
-        href: 'https://github.com/onwidget/astrowind',
+        href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
       },
       // { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
     ]}
@@ -42,7 +41,7 @@ const metadata = {
   >
     <Fragment slot="title">
       Ni banco, ni fintech<br />
-      tu compañero<br />
+      tu qompañero<br />
       financiero
     </Fragment>
 
@@ -97,11 +96,8 @@ const metadata = {
     classes={{ container: 'dark:bg-dark-lime' }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
-      <p class="mt-10 dark:text-white">
-        Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br />prácticas
-        financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.
-      </p>
+      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
+      <p class="mt-10 dark:text-white">Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br/>prácticas financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -112,8 +108,8 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="¿Porqué usar Qompa?"
-    subtitle="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
+    title="¿Por qué usar Qompa?"
+    tagline="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
     items={[
       {
         title: 'Dashboard Interactivo',
@@ -160,8 +156,9 @@ const metadata = {
   <!-- Pricing Widget ******************* -->
 
   <Prices
+    id="pricing"
     title="Descubre nuestros planes"
-    subtitle="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
+    tagline="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
     isDark={false}
     classes={{ container: 'bg-lime', prices: 'bg-light-gray' }}
     prices={[
@@ -236,11 +233,32 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Elegir este plan',
-          href: '#',
+          href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
         },
       },
     ]}
   />
+
+  <Content
+    id="blog"
+    isReversed
+    textInCard
+    image={{
+      src: '~/assets/images/image-city.png',
+      alt: 'City',
+    }}
+    classes={{container: 'dark:bg-orange'}}
+  >
+    <Fragment slot="content">
+      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-dark-lime mb-2">¿Cómo nació la<br />idea de Qompa?</h2>
+      <p class="mt-10 dark:text-dark-lime">A mediados del 2023 la gerencia de Inversiones IO decide explorar el mercado de las empresas que ya colaboraban con su dinero para ayudarlos a crecer siendo sus acompañantes</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <!-- Brands Widget ****************** -->
 
   <Brands
@@ -270,4 +288,80 @@ const metadata = {
       },
     ]}
   />
+
+
+  <Team
+    title="Conoce a nuestro equipo"
+    tagline='Descubre quiénes están transformando la<br/ >manera en la que haces negocios.'
+    people={[
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Simon",
+        surname: "Vacher",
+        role: "CEO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Zoe",
+        surname: "Lopez",
+        role: "CPO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Diana",
+        surname: "Field",
+        role: "Product Designer"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Luis",
+        surname: "Espinoza",
+        role: "CTO"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Sergio",
+        surname: "Yep",
+        role: "UX/UI"
+      },{
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Luis",
+        surname: "Quiñones",
+        role: "Sr Backend"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Facundo",
+        surname: "Marino",
+        role: "Sr Frontend"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Diego",
+        surname: "Gutierrez",
+        role: "Growth Lead"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Graciela",
+        surname: "Ramirez",
+        role: "Product Designer"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "German",
+        surname: "Goñi",
+        role: "Data Analytics Advisory"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "Francesco",
+        surname: " Ucelli",
+        role: "IA Consulting"
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: "David",
+        surname: "Tramon",
+        role: "Gamification Advisory"
+      },
+    ]}
+  />
+  
 </Layout>

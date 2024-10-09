@@ -1,0 +1,41 @@
+---
+import type { Portrait as Props } from '~/types';
+
+import Image from '~/components/common/Image.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+  people = [],
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-3xl max-w- ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  <div class="grid md:grid-cols-6 sm:grid-cols-4 grid-cols-3 gap-0 content-stretch">
+    {
+      people &&
+        people.map(
+          (profile) =>
+            profile.photo && (
+              <div class="mb-5">
+                <div class="px-1 rounded-m bg-white max-w-30">
+                  <Image src={profile.photo} alt={profile.surname || ''} class="rounded-lg" width={200} height={200} />
+                </div>
+              <div class="text-center">
+                <h3 class="dark:text-dark-lime font-bold">{profile.name}<br/>{profile.surname}</h3>
+                <p class="text-sm">{profile.role}</p>
+              </div>   
+              </div>           
+            )
+        )
+    }
+  </div>
+</WidgetWrapper>
