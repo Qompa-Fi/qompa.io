@@ -1,0 +1,214 @@
+---
+import Image from '~/components/common/Image.astro';
+const slides = [
+{
+    title: "Inteligencia artificial",
+    description: "¡Siempre presente! Qompita, nuestro asistente virtual con inteligencia artificial te acompañará en el día a día, para que le pidas consejos, gráficos, análisis y mucho más.",
+    icon: "📈",
+    color: "#4187ff",
+    image: "~/assets/images/compita-small.png"
+    },
+    {
+    title: "Carga de documentos",
+    description: "Digitaliza todos tus documentos de forma rápida y segura. Con ayuda de la IA podrás registrar tus ingresos y egresos sin necesidad de escribir nada",
+    icon: "📊",
+    color: "#ffe100",
+    image: "~/assets/images/file-plus-dynamic-color.png"
+    },
+    {
+        title: "Cobra a tus clientes",
+        description: "Programa tus facturas por cobrar para que tu liquidez no se afecte, enviamos notificaciones de cobro a sus clientes (Próximamente)",
+        icon: "🚨",
+        color: "#ff8200",
+        image: "~/assets/images/target-dynamic-color.png"
+    },
+    {
+    title: "Dashboard interactivo",
+    description: "Revisa tus ingresos y egresos en un solo lugar para conocer tu liquidez. Obtén gráficos al instante para una mejor toma de decisiones.",
+    icon: "📊",
+    color: "#ffe100",
+    image: "~/assets/images/computer-01.png"
+    },
+    {
+    title: "Paga a tus proveedores",
+    description: "Gestiona tus pagos desde Qompa para todos tus proveedores, sin ir a tu banco y en fecha, para que no te retrases.",
+    icon: "📊",
+    color: "#ff70d3",
+    image: "~/assets/images/cards-dinamyc-color.png"
+    }
+];
+---
+
+<div class="carousel-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {slides.map((slide, index) => (
+        <div class="swiper-slide" style={`background-color: ${slide.color};`}>
+          <div class="slide-content">
+            <div class="slide-image">
+                <Image src={slide.image} alt={slide.title || ''} class="" />
+            </div>
+            <div class="slide-text text-dark-lime">
+              <h2 class="font-semibold">{slide.title}</h2>
+              <p>{slide.description}</p>
+            </div>
+            <div class="slide-number text-dark-lime">{index + 1}/{slides.length}</div>            
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>   
+  </div> 
+    
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+  function initSwiper() {
+    new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      slidesPerView: 1.2,
+      centeredSlides: true,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+         type: 'bullets',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  // Initialize Swiper
+  initSwiper();
+
+  // Re-initialize Swiper after Astro page transitions
+  document.addEventListener('astro:page-load', initSwiper);
+  document.addEventListener('astro:after-swap', initSwiper);
+</script>
+
+<style>
+  .carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  .swiper-slide {
+    height: 300px;
+    border-radius: 20px;
+    color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .slide-content {
+    display: flex;
+    height: 100%;
+  }
+  .slide-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .slide-number {
+    position: inherit;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: auto;
+  }
+  .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem* calc(1 - var(--tw-space-x-reverse)));
+    margin-left: calc(1rem* calc(1 - var(--tw-space-x-reverse)));
+  }
+  :global(.swiper-button-next), :global(.swiper-button-prev) {
+    position: relative;
+    left: 0;
+    right: 0;
+    color: #000000;
+    background: #b7e400;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  :global(.swiper-pagination) {
+    position: inherit;
+  }
+  :global(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+    width: auto;
+    position: inherit;
+    margin: 0 1rem;
+  }
+  
+  :global(.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet) {
+    margin: 18px var(--swiper-pagination-bullet-horizontal-gap, 4px);
+  }
+  :global(.swiper-button-next::after), :global(.swiper-button-prev::after) {
+    font-size: .7rem;
+  }
+  :global(.swiper-pagination-bullet) {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px));
+    background: rgba(0, 0, 0, 0.15);
+    opacity: 0.5;
+  }
+  :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+    background-color: #b7e400;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide {
+      height: auto;
+      min-height: 300px;
+    }
+    .slide-content {
+      flex-direction: column;
+    }
+    h2 {
+      font-size: 2.5rem;
+      line-height: normal;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
