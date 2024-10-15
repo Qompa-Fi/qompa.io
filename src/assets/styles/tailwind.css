@@ -36,6 +36,9 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-8xl {
+    font-size: 4.75rem;
+  }
 }
 
 @font-face {

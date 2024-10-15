@@ -17,7 +17,7 @@ import Brands from '~/components/widgets/Brands.astro';
 import Team from '~/components/widgets/Team.astro';
 
 const metadata = {
-  title: 'Qompa - Ni Banco Ni Fintech',
+  title: 'Qompa - Ni Banco Ni Fintech, tu qompañero financiero',
   ignoreTitleTemplate: true,
 };
 ---
@@ -28,9 +28,9 @@ const metadata = {
   <Hero2
     actions={[
       {
-        variant: 'secondary',
+        variant: 'primary',
         target: '_self',
-        text: 'Quiero que me contacten',
+        text: 'Quiero conocer más',
         href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
       },
       // { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
@@ -40,20 +40,12 @@ const metadata = {
       alt: 'App',
     }}
   >
-    <Fragment slot="title">
-      Ni banco, ni fintech<br />
-      tu qompañero<br />
-      financiero
-    </Fragment>
+    <Fragment slot="title"> Ni banco, ni fintech tu qompañero financiero </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-semibold"
-        >Transformamos a las empresas con soluciones financieras innovadoras basadas en <br />Inteligencia Artificial</span
-      >
-    </Fragment>
-
-    <Fragment slot="supported">
-      <span class="font-semibold">Supervisados por</span>
+      <span class="font-semibold">
+        Transformamos a las empresas con soluciones financieras innovadoras basadas en Inteligencia Artificial
+      </span>
     </Fragment>
   </Hero2>
 
@@ -97,8 +89,13 @@ const metadata = {
     classes={{ container: 'dark:bg-dark-lime' }}
   >
     <Fragment slot="content">
-      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-white sm:text-6xl mb-2">¡Hola soy<br />Qompita!</h2>
-      <p class="mt-10 dark:text-white">Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br/>prácticas financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.</p>
+      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-white sm:text-6xl mb-2">
+        ¡Hola soy<br />Qompita!
+      </h2>
+      <p class="mt-10 dark:text-white">
+        Tu asesor de Inteligencia Artificial 24/7.<br />Te ayudaré a conocer sobre las mejores<br />prácticas
+        financieras y automatizar tus reportes,<br />pagos y todo lo que necesites.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -109,7 +106,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Carousel />
-  
+
   <Features2
     title="¿Por qué usar Qompa?"
     tagline="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
@@ -250,11 +247,16 @@ const metadata = {
       src: '~/assets/images/image-city.png',
       alt: 'City',
     }}
-    classes={{container: 'dark:bg-orange'}}
+    classes={{ container: 'dark:bg-orange' }}
   >
     <Fragment slot="content">
-      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-dark-lime mb-2">¿Cómo nació la<br />idea de Qompa?</h2>
-      <p class="mt-10 dark:text-dark-lime">A mediados del 2023 la gerencia de Inversiones IO decide explorar el mercado de las empresas que ya colaboraban con su dinero para ayudarlos a crecer siendo sus acompañantes</p>
+      <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-dark-lime mb-2">
+        ¿Cómo nació la<br />idea de Qompa?
+      </h2>
+      <p class="mt-10 dark:text-dark-lime">
+        A mediados del 2023 la gerencia de Inversiones IO decide explorar el mercado de las empresas que ya colaboraban
+        con su dinero para ayudarlos a crecer siendo sus acompañantes
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -288,79 +290,82 @@ const metadata = {
     ]}
   />
 
-
   <Team
     title="Conoce a nuestro equipo"
-    tagline='Descubre quiénes están transformando la<br/ >manera en la que haces negocios.'
+    tagline="Descubre quiénes están transformando la<br/ >manera en la que haces negocios."
     people={[
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "Simon",
-        surname: "Vacher",
-        role: "CEO"
-      },{
-        photo: '~/assets/images/diego-gutierrez.png',
-        name: "Zoe",
-        surname: "Lopez",
-        role: "CPO"
-      },{
-        photo: '~/assets/images/diego-gutierrez.png',
-        name: "Diana",
-        surname: "Field",
-        role: "Product Designer"
-      },{
-        photo: '~/assets/images/diego-gutierrez.png',
-        name: "Luis",
-        surname: "Espinoza",
-        role: "CTO"
-      },{
-        photo: '~/assets/images/diego-gutierrez.png',
-        name: "Sergio",
-        surname: "Yep",
-        role: "UX/UI"
-      },{
-        photo: '~/assets/images/diego-gutierrez.png',
-        name: "Luis",
-        surname: "Quiñones",
-        role: "Sr Backend"
+        name: 'Simon',
+        surname: 'Vacher',
+        role: 'CEO',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "Facundo",
-        surname: "Marino",
-        role: "Sr Frontend"
+        name: 'Zoe',
+        surname: 'Lopez',
+        role: 'CPO',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "Diego",
-        surname: "Gutierrez",
-        role: "Growth Lead"
+        name: 'Diana',
+        surname: 'Field',
+        role: 'Product Designer',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "Graciela",
-        surname: "Ramirez",
-        role: "Product Designer"
+        name: 'Luis',
+        surname: 'Espinoza',
+        role: 'CTO',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "German",
-        surname: "Goñi",
-        role: "Data Analytics Advisory"
+        name: 'Sergio',
+        surname: 'Yep',
+        role: 'UX/UI',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "Francesco",
-        surname: " Ucelli",
-        role: "IA Consulting"
+        name: 'Luis',
+        surname: 'Quiñones',
+        role: 'Sr Backend',
       },
       {
         photo: '~/assets/images/diego-gutierrez.png',
-        name: "David",
-        surname: "Tramon",
-        role: "Gamification Advisory"
+        name: 'Facundo',
+        surname: 'Marino',
+        role: 'Sr Frontend',
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: 'Diego',
+        surname: 'Gutierrez',
+        role: 'Growth Lead',
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: 'Graciela',
+        surname: 'Ramirez',
+        role: 'Product Designer',
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: 'German',
+        surname: 'Goñi',
+        role: 'Data Analytics Advisory',
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: 'Francesco',
+        surname: ' Ucelli',
+        role: 'IA Consulting',
+      },
+      {
+        photo: '~/assets/images/diego-gutierrez.png',
+        name: 'David',
+        surname: 'Tramon',
+        role: 'Gamification Advisory',
       },
     ]}
   />
-  
 </Layout>

@@ -3,48 +3,42 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Inicio',
-      href: getPermalink('/'),
-    },
-    {
-      text: 'Nosotros',
+      text: '¿Qué ofrece Qompa?',
       href: getPermalink('/#about'),
     },
     {
-      text: 'Planes',
+      text: 'Nuestros planes',
       href: getPermalink('/#pricing'),
     },
     {
-      text: 'Blog',
-      href: getPermalink('/#blog'),
+      text: 'Nosotros',
+      href: getPermalink('/#team'),
     },
   ],
-  actions: [{ text: 'Regístrate', href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa', target: '_self' }],
+  actions: [
+    {
+      text: 'Regístrate',
+      href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
+      target: '_self',
+      variant: 'primary',
+    },
+  ],
+  showRssFeed: false,
 };
 
 export const footerData = {
   links: [
     {
       title: '',
-      links: [{ text: 'Inicio', href: getPermalink('/') }],
+      links: [{ text: '¿Qué ofrece Qompa?', href: getPermalink('/#about') }],
     },
     {
       title: '',
-      links: [
-        { text: 'Nosotros', href: getPermalink('/#about') },
-      ],
+      links: [{ text: 'Nuestros planes', href: getPermalink('/#pricing') }],
     },
     {
       title: '',
-      links: [
-        { text: 'Planes', href: getPermalink('/#pricing') },
-      ],
-    },
-    {
-      title: '',
-      links: [
-        { text: 'Blog', href: getPermalink('/#blog') },
-      ],
+      links: [{ text: 'Nosotros', href: getPermalink('/#team') }],
     },
   ],
   secondaryLinks: [
