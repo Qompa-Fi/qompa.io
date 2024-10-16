@@ -153,6 +153,8 @@ export interface Price {
   subtitle?: string;
   description?: string;
   price?: number | string;
+  oldPrice?: number | string;
+  disclaimer?: Disclaimer;
   period?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
@@ -194,6 +196,12 @@ export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   icon?: string;
   classes?: Record<string, string>;
   type?: 'button' | 'submit' | 'reset';
+}
+
+export interface Disclaimer extends Omit<HTMLAttributes<'a'>, 'slot'> {
+  text: string;
+  cardColor?: string;
+  title: string;
 }
 
 export interface ItemGrid {

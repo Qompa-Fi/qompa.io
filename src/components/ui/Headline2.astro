@@ -1,0 +1,35 @@
+---
+import type { Headline as Props } from '~/types';
+import { twMerge } from 'tailwind-merge';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  classes = {},
+} = Astro.props;
+
+const {
+  container: containerClass = 'md:flex md:w-full md:gap-8',
+  title: titleClass = 'text-6xl md:text-6xl lg:text-8xl highlight',
+  subtitle: subtitleClass = 'text-xl',
+} = classes;
+---
+
+{
+  (title || subtitle || tagline) && (
+    <div class={twMerge('mb-8 ', containerClass)}>
+      {title && (
+        <div class="col-span-3 md:basis-2/3 self-center ">
+          <h2 class={twMerge('font-bold leading-tighter font-heading text-heading', titleClass)} set:html={title} />
+        </div>
+      )}
+      {tagline && (
+        <div class="md:basis-1/3 self-center font-semibold content-end">
+          <p class="pt-5 text-lg text-secondary dark:text-dark-lime tracking-wide" set:html={tagline} />
+          {subtitle && <p class={twMerge('mt-4 text-muted', subtitleClass)} set:html={subtitle} />}
+        </div>
+      )}
+    </div>
+  )
+}

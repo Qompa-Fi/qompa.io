@@ -86,7 +86,7 @@ const metadata = {
       src: '~/assets/images/qompa-mascot-1.png',
       alt: 'Qompa Image',
     }}
-    classes={{ container: 'dark:bg-dark-lime py-0' }}
+    classes={{ container: 'dark:bg-dark-lime lg:py-0 p-4' }}
   >
     <Fragment slot="content">
       <h2 class="text-5xl font-heading font-bold tracking-tight dark:text-dark-light sm:text-9xl mb-2">
@@ -108,7 +108,7 @@ const metadata = {
   <Features2
     title="¿Por qué usar Qompa?"
     tagline="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
-    classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12'}}
+    classes={{ container: 'px-0 py-6 md:py-8 lg:py-12'}}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -119,84 +119,60 @@ const metadata = {
 
   <Prices
     id="pricing"
-    title="Descubre nuestros planes"
-    tagline="¡Conoce todos los beneficios que Qompa puede brindarte a costo 0!"
+    title="Descubre<br/>nuestros planes"
+    tagline="¡Conoce todos los beneficios que<br/>Qompa puede brindarte a costo cero!"
     isDark={false}
     classes={{ container: 'bg-lime md:px-6 py-6 md:py-8 lg:py-12', prices: 'bg-light-gray' }}
     prices={[
       {
-        title: 'gratis',
+        title: 'Básico',
         price: '0',
-        period: 'per month',
+        oldPrice: '40',
+        period: '/ por los primeros 3 meses',
         items: [
           {
-            description: 'Hasta 5 transacciones de pago',
+            description: 'Flujo de caja automatizado e interactivo (Real y proyectado)',
           },
           {
-            description: '5 consultas personalizadas con AI',
+            description: 'Carga de documentos por imágenes imilitadas',
           },
           {
-            description: 'Único accceso de administrador',
+            description: 'Hasta 30 transferencias de pago mensual',
           },
           {
-            description: '24/7 VIP Support',
+            description: 'Consultas personalizadas con el asistente de inteligencia artificial Qompa',
           },
+          {
+            description: 'Configura tus alertas de pago'
+          }
         ],
         callToAction: {
-          target: '_blank',
+          target: '_self',
           text: 'Elegir este plan',
-          href: '#',
+          href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
         },
+        hasRibbon: true,
+        ribbonTitle: '¡Gratis!',
       },
       {
         title: 'standard',
-        price: 30,
-        period: 'Por Mes',
-        items: [
-          {
-            description: 'Hasta 15 transacciones de pago',
-          },
-          {
-            description: '15 consultas personalizadas con AI',
-          },
-          {
-            description: 'Administrador y 2 cuentas configurables',
-          },
-          {
-            description: '24/7 VIP Support',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Elegir este plan',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
+        price: 60,
+        period: '/ Por Mes',
+        disclaimer: {
+          cardColor: 'bg-yellow',
+          title: 'Próximamente',
+          text: 'Pronto descubrirás más beneficios de nuestro plan regular, junto con nuevas funcionalidades para impulsar el crecimiento de tu negocio.'
+        }        
       },
       {
         title: 'Premium',
         price: 100,
-        period: 'Por mes',
-        items: [
-          {
-            description: 'Transacciones de pago ilimitadas',
-          },
-          {
-            description: 'Consultas con AI ilimitadas',
-          },
-          {
-            description: 'Administrador y 10 cuentas configurables',
-          },
-          {
-            description: '24/7 VIP Support',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Elegir este plan',
-          href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
-        },
+        period: '/ Por mes',
+        disclaimer: {
+          cardColor: 'bg-pink',
+          title: 'Próximamente',
+          text: 'Nuestro plan premium maximiza el uso de nuestra inteligencia artificial, analizando tus datos y brindándote información clave para tomar mejores decisiones en el momento justo.'
+        } 
       },
     ]}
   />
@@ -212,7 +188,7 @@ const metadata = {
     classes={{ container: 'dark:bg-orange md:px-6 py-6 md:py-8 lg:py-12'}}
   >
     <Fragment slot="content">
-      <h2 class="text-8xl font-heading font-bold tracking-tight dark:text-dark-lime mb-1">
+      <h2 class="text-6xl font-heading font-bold tracking-tight dark:text-dark-lime mb-1">
         ¿Cómo nació la<br />idea de Qompa?
       </h2>
       <p class="mt-10 dark:text-dark-lime">
