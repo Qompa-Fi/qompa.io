@@ -74,6 +74,15 @@
   .font-heading {
     font-family: 'MDNichrome', sans-serif;
   }
+  .font-poppings {
+    font-family: 'Poppins', sans-serif;
+  }
+  .leading-105 {
+    line-height: 10.5rem;
+  }
+  .min-h-98 {
+    min-height: 32rem;
+  }
 }
 
 @layer components {
@@ -82,8 +91,7 @@
   }
 
   .btn-primary {
-    font-family: 'Poppins', sans-serif;
-    @apply btn font-bold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary dark:text-lime dark:bg-dark-lime dark:border-dark-lime dark:hover:bg-dark-lime dark:hover:border-lime;
+    @apply btn font-poppings font-bold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary dark:text-lime dark:bg-dark-lime dark:border-dark-lime dark:hover:bg-dark-lime dark:hover:border-lime;
   }
 
   .btn-secondary {
