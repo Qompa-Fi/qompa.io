@@ -39,6 +39,9 @@
   .text-8xl {
     font-size: 4.75rem;
   }
+  .text-9xl {
+    font-size: 5.75rem;
+  }
 }
 
 @font-face {
@@ -61,6 +64,9 @@
   }
   .text-lime {
     color: #b7e400;
+  }
+  .text-dark-light {
+    color: #E8E7DE;
   }
   .text-dark-lime {
     color: #083433;

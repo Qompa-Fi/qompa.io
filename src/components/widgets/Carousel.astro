@@ -28,7 +28,7 @@ const slides = [
   {
     title: 'Dashboard interactivo',
     description:
-      'Revisa tus ingresos y egresos en un solo lugar para conocer tu liquidez. Obtén gráficos al instante para una mejor toma de decisiones.',
+      'Revisa tus ingresos y egresos en un solo lugar para conocer tu liquidez. Obtén gráficos al instante para una mejor toma de desiciones.',
     icon: '📊',
     color: '#ffe100',
     image: '~/assets/images/computer-01.png',
@@ -55,7 +55,7 @@ const slides = [
                 <Image src={slide.image} alt={slide.title || ''} class="" />
               </div>
               <div class="slide-text text-dark-lime">
-                <h2 class="font-semibold">{slide.title}</h2>
+                <h2 class="text-6xl font-semibold mb-4">{slide.title}</h2>
                 <p>{slide.description}</p>
               </div>
               <div class="slide-number text-dark-lime">
@@ -116,7 +116,7 @@ const slides = [
     padding: 20px 0;
   }
   .swiper-slide {
-    height: 300px;
+    height: 400px;
     border-radius: 20px;
     color: #fff;
     padding: 2rem;
@@ -142,14 +142,6 @@ const slides = [
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-  }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
   }
   .slide-number {
     position: inherit;
