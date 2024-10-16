@@ -36,11 +36,17 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-8xl {
+    font-size: 4.75rem;
+  }
+  .text-9xl {
+    font-size: 5.75rem;
+  }
 }
 
 @font-face {
   font-family: 'MDNichrome';
-  src: url('/fonts/MDNichromeTest-Bold.otf') format('opentype');
+  src: url('/fonts/MDNichrome-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -59,6 +65,9 @@
   .text-lime {
     color: #b7e400;
   }
+  .text-dark-light {
+    color: #E8E7DE;
+  }
   .text-dark-lime {
     color: #083433;
   }
@@ -69,11 +78,12 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-xl border-gray-400 border bg-transparent font-extrabold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-dark-lime dark:border-dark-lime dark:hover:bg-lime dark:hover:border-slate-800 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-3xl border-gray-400 border bg-transparent font-extrabold text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-dark-lime dark:border-dark-lime dark:hover:bg-lime dark:hover:border-slate-800 cursor-pointer;
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary dark:text-lime dark:bg-dark-lime dark:border-dark-lime dark:hover:bg-dark-lime dark:hover:border-lime;
+    font-family: 'Poppins', sans-serif;
+    @apply btn font-bold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary dark:text-lime dark:bg-dark-lime dark:border-dark-lime dark:hover:bg-dark-lime dark:hover:border-lime;
   }
 
   .btn-secondary {
