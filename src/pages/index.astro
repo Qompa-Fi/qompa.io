@@ -31,7 +31,7 @@ const metadata = {
         variant: 'primary',
         target: '_self',
         text: 'Quiero conocer más',
-        href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
+        href: 'http://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa-1-0-0',
       },
       // { variant: 'primary', text: 'Crea tu cuenta gratis', href: '#features' },
     ]}
@@ -121,7 +121,7 @@ const metadata = {
         callToAction: {
           target: '_self',
           text: 'Elegir este plan',
-          href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
+          href: 'http://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa-1-0-0',
         },
         hasRibbon: true,
         ribbonTitle: '¡Gratis!',
@@ -154,7 +154,7 @@ const metadata = {
     isReversed
     textInCard
     image={{
-      src: '~/assets/images/image-city.png',
+      src: '~/assets/images/image-city-lima.png',
       alt: 'City',
     }}
     classes={{ container: 'dark:bg-orange md:px-6 py-6 md:py-8 lg:py-12' }}
@@ -263,7 +263,7 @@ const metadata = {
       Descubre quiénes están transformando<br />la manera en la que haces negocios.
     </p>
   </div>
-  <div class="grid md:grid-cols-5 grid-cols-4 gap-0 content-stretch">
+  <div id="team" class="grid md:grid-cols-5 grid-cols-4 gap-0 content-stretch">
     <div>
       <Image
         class="w-full object-none aspect-square"
@@ -314,7 +314,7 @@ const metadata = {
         decoding="async"
       />
     </div>
-    <div id="team" class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
+    <div class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
       <div class="row-start-2 text-center content-center">
         <h3 class="font-heading xl:text-9xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">
           Tenemos un equipo de<br />trabajo disruptivo
@@ -421,4 +421,34 @@ const metadata = {
     ]}
     classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12' }}
   />
+
+  <Content
+    id="come"
+    isReversed
+    textInCard
+    image={{
+      src: '~/assets/images/employee-1.png',
+      alt: 'Colaboradora',
+    }}
+    classes={{ container: 'dark:bg-lime md:px-6 py-6 md:py-8 lg:py-12', bgBox: 'dark:bg-dark-lime' }}
+    callToAction={{
+      class: 'bg-lime mt-2',
+      target: '_self',
+      text: 'Quiero conocer más',
+      href: 'http://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa-1-0-0',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-6xl font-heading font-bold tracking-tight dark:text-lime mb-1">
+        ¿Quieres ser parte de nuestros primeros usuarios?
+      </h2>
+      <p class="mt-10 dark:text-lime">
+        Inscríbete para recibir el beneficio sin costo durante 3 meses y puedas vivir esta nueva experiencia
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 </Layout>

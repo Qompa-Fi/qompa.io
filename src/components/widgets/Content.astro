@@ -43,13 +43,13 @@ const {
   />
   <div class={`mx-auto max-w-7xl p-4 md:px-8`}>
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-8`}>
-      <div class={`md:basis-1/2 self-center ${textInCard ? 'rounded-lg bg-light-gray p-12' : ''}`}>
+      <div class={`md:basis-1/2 self-center  ${classes.bgBox ?? ''} ${textInCard ? 'rounded-lg bg-light-gray p-12' : ''}`}>
         {content && <div class="mb-12 text-lg" set:html={content} />}
 
         {
           callToAction && (
-            <div class="mt-[-40px] mb-8 text-primary">
-              <Button variant="link" {...callToAction} />
+            <div class="">
+              <Button variant="quarter" {...callToAction} />
             </div>
           )
         }
@@ -77,8 +77,8 @@ const {
               ) : (
                 <Image
                   class="mx-auto w-full rounded-lg object-none aspect-square"
-                  width={600}
-                  height={600}
+                  width={520}
+                  height={520}
                   widths={[300, 568]}
                   sizes="(max-width: 768px) 100vw, 432px"
                   {...image}
