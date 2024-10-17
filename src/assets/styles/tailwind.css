@@ -42,6 +42,15 @@
   .text-9xl {
     font-size: 5.75rem;
   }
+  .text-2xs {
+    font-size: 0.575rem;
+  }
+  .text-3xs {
+    font-size: 0.45rem;
+  }
+  .leading-zero {
+    line-height: 0.5;
+  }
 }
 
 @font-face {

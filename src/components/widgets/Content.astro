@@ -43,8 +43,8 @@ const {
   />
   <div class={`mx-auto max-w-7xl p-4 md:px-8`}>
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-8`}>
-      <div class={`md:basis-1/2 self-center  ${classes.bgBox ?? ''} ${textInCard ? 'rounded-lg bg-light-gray p-12' : ''}`}>
-        {content && <div class="mb-12 text-lg" set:html={content} />}
+      <div class={`md:basis-1/2 self-center  ${classes.bgBox ?? ''} ${textInCard ? 'rounded-lg bg-light-gray px-4 py-4 md:py-8 md:p-12' : ''}`}>
+        {content && <div class="md:mb-12 text-lg" set:html={content} />}
 
         {
           callToAction && (

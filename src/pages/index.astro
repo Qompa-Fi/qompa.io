@@ -160,10 +160,10 @@ const metadata = {
     classes={{ container: 'dark:bg-orange md:px-6 py-6 md:py-8 lg:py-12' }}
   >
     <Fragment slot="content">
-      <h2 class="text-6xl font-heading font-bold tracking-tight dark:text-dark-lime mb-1">
+      <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tight dark:text-dark-lime mb-1">
         ¿Cómo nació la<br />idea de Qompa?
       </h2>
-      <p class="mt-10 dark:text-dark-lime">
+      <p class="mt-10 dark:text-dark-lime leading-6">
         A finales del 2023 los fundadores de Inversiones IO, deciden resolver una necesidad que veían en las PYMES de
         ordenar y mejorar su gestión operativa, porque afectaba negativamente su salud financiera. Así nació Qompa, que
         impulsada por inteligencia artificial será capaz de brindar soluciones que mejoren el día a día de todas estas
@@ -259,12 +259,12 @@ const metadata = {
     <h3 class="font-bold leading-tighter font-heading text-heading text-6xl md:text-6xl highlight">
       Tenemos un equipo de<br />trabajo disruptivo
     </h3>
-    <p class="xl:text-2xl lg:text-sm mt-5">
+    <p class="xl:text-2xl lg:text-sm font-semibold mt-5">
       Descubre quiénes están transformando<br />la manera en la que haces negocios.
     </p>
   </div>
   <div id="team" class="grid md:grid-cols-5 grid-cols-4 gap-0 content-stretch">
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/simon_vacher.png"
@@ -273,8 +273,14 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Simon Vacher</h4>
+          <span class="text-3xs md:text-sm">CEO</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/zoe_lopez.png"
@@ -283,8 +289,14 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Zoe Lopez</h4>
+          <span class="text-3xs md:text-sm">CPO</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/luis_espinoza.png"
@@ -293,8 +305,14 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Luis Espinoza</h4>
+          <span class="text-3xs md:text-sm">CTO</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/diana_field.png"
@@ -303,8 +321,14 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Diana Field</h4>
+          <span class="text-3xs md:text-sm">Sr Product Designer</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/ciela_ramirez.png"
@@ -313,10 +337,16 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Ciela Ramírez</h4>
+          <span class="text-3xs md:text-sm">Product Designer</span>
+        </div>
+      </div>
     </div>
     <div class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
       <div class="row-start-2 text-center content-center">
-        <h3 class="font-heading xl:text-9xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">
+        <h3 class="font-heading xl:text-8xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">
           Tenemos un equipo de<br />trabajo disruptivo
         </h3>
         <p class="xl:text-2xl lg:text-sm text-xs px-3">
@@ -324,7 +354,7 @@ const metadata = {
         </p>
       </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/diego_gutierrez.png"
@@ -333,28 +363,46 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Diego Gutierrez</h4>
+          <span class="text-3xs md:text-sm">Growth Lead</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
-        src="~/assets/images/sergio_yap.png"
-        alt="Sergio Yap"
+        src="~/assets/images/sergio_yep.png"
+        alt="Sergio Yep"
         layout="cover"
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Sergio Yep</h4>
+          <span class="text-3xs md:text-sm">UX/UI Designer Sr</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/luis_quinones.png"
-        alt="Luis Quinones"
+        alt="Luis Quiñones"
         layout="cover"
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Luis Quiñones</h4>
+          <span class="text-3xs md:text-sm">Backend Dev Sr</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
         src="~/assets/images/facundo_marino.png"
@@ -363,36 +411,60 @@ const metadata = {
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Facundo Marino</h4>
+          <span class="text-3xs md:text-sm">Frontend Dev Sr</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
-        src="~/assets/images/manuel.png"
-        alt="Manuel"
+        src="~/assets/images/david_tramon.png"
+        alt="David Tramon"
         layout="cover"
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">David Tramon</h4>
+          <span class="text-3xs md:text-sm">Gamification Advisory</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
-        src="~/assets/images/chile.png"
-        alt="Chile"
+        src="~/assets/images/german_goni.png"
+        alt="German Goñi"
         layout="cover"
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">German Goñi</h4>
+          <span class="text-3xs md:text-sm">Data Analytics Advisory</span>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="relative group">
       <Image
         class="w-full "
-        src="~/assets/images/franchesco_uccelli.png"
-        alt="Franchesco Uccelli"
+        src="~/assets/images/franchesco_ucelli.png"
+        alt="Franchesco Ucelli"
         layout="cover"
         loading="lazy"
         decoding="async"
       />
+      <div class="opacity-0 min-h-12 group-hover:opacity-100 duration-300 absolute left-0 bottom-0 right-0 z-10 flex items-end text-xl bg-gradient-to-t from-gray-900 text-dark-light">
+        <div class="px-1 pb-2 md:p-4 leading-zero md:leading-none">
+          <h4 class="font-semibold text-2xs md:text-2xl">Francesco Ucelli</h4>
+          <span class="text-3xs md:text-sm">AI Consulting</span>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Brands Widget ****************** -->
@@ -407,14 +479,14 @@ const metadata = {
     }}
     classes={{ container: 'dark:bg-lime md:px-6 py-6 md:py-8 lg:py-12', bgBox: 'dark:bg-dark-lime' }}
     callToAction={{
-      class: 'bg-lime mt-2',
+      class: 'bg-lime mt-2 w-full',
       target: '_self',
       text: 'Quiero conocer más',
       href: 'http://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa-1-0-0',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-6xl font-heading font-bold tracking-tight dark:text-lime mb-1">
+      <h2 class="text-5xl md:text-6xl font-heading font-bold tracking-tight dark:text-lime mb-1">
         ¿Quieres ser parte de nuestros primeros usuarios?
       </h2>
       <p class="mt-10 dark:text-lime">
