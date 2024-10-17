@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
+import Image from '~/components/common/Image.astro';
 // import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 // import Note from '~/components/widgets/Note.astro';
@@ -49,36 +49,7 @@ const metadata = {
     </Fragment>
   </Hero2>
 
-  <!-- <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-dark-lime highlight"> Astro 4.0</span> + Tailwind CSS
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
-    </Fragment>
-  </Hero> -->
-
-  <!-- Content Widget **************** -->
+  <!-- Content2 Widget **************** -->
 
   <Content2
     isReversed
@@ -201,34 +172,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Brands Widget ****************** -->
-
-  <Brands
-    title="Contamos con estos aliados"
-    icons={[]}
-    images={[
-      {
-        src: '~/assets/images/prometeo-gray-logo.png',
-        alt: 'Prometeo',
-      },
-      {
-        src: '~/assets/images/truora-gray-logo.png',
-        alt: 'Truora',
-      },
-      {
-        src: '~/assets/images/kin-analytics-gray-logo.png',
-        alt: 'Kin Analytics',
-      },
-
-      {
-        src: '~/assets/images/inversiones-io-gray-logo.png',
-        alt: 'Inversiones.io',
-      },
-    ]}
-    classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12'}}
-  />
-
-  <Team
+    <!-- <Team
     title="Conoce a nuestro equipo"
     tagline="Descubre quiénes están transformando la<br/ >manera en la que haces negocios."
     people={[
@@ -305,5 +249,153 @@ const metadata = {
         role: 'Gamification Advisory',
       },
     ]}
+  /> -->
+
+
+  <div class="md:hidden relative px-4 text-default mx-auto md:px-6 py-6 md:py-8 lg:py-12">
+    <h3 class="font-bold leading-tighter font-heading text-heading text-6xl md:text-6xl highlight">Tenemos un equipo de<br/>trabajo disruptivo</h3>
+    <p class="xl:text-2xl lg:text-sm mt-5">Descubre quiénes están transformando<br/>la manera en la que haces negocios.</p>
+  </div>
+  <div class="grid md:grid-cols-5 grid-cols-4 gap-0 content-stretch">
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/simon_vacher.png"
+        alt="Simon Vacher"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/zoe_lopez.png"
+        alt="Zoe Lopez"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/luis_espinoza.png"
+        alt="Luis Espinoza"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/diana_field.png"
+        alt="Diana Field"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/ciela_ramirez.png"
+        alt="Ciela Ramirez"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
+      <div class="row-start-2 text-center content-center">
+        <h3 class="font-heading xl:text-9xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">Tenemos un equipo de<br/>trabajo disruptivo</h3>
+        <p class="xl:text-2xl lg:text-sm text-xs px-3">Descubre quiénes están transformando la manera en la que haces negocios</p>
+      </div>
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/diego_gutierrez.png"
+        alt="Diego Gutierrez"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/sergio_yap.png"
+        alt="Sergio Yap"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/luis_quinones.png"
+        alt="Luis Quinones"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/facundo_marino.png"
+        alt="Facundo Marino"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/manuel.png"
+        alt="Manuel"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/chile.png"
+        alt="Chile"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div>
+      <Image class="w-full object-none aspect-square"
+        src="~/assets/images/franchesco_uccelli.png"
+        alt="Franchesco Uccelli"
+        layout="cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Contamos con estos aliados"
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/prometeo-gray-logo.png',
+        alt: 'Prometeo',
+      },
+      {
+        src: '~/assets/images/truora-gray-logo.png',
+        alt: 'Truora',
+      },
+      {
+        src: '~/assets/images/kin-analytics-gray-logo.png',
+        alt: 'Kin Analytics',
+      },
+
+      {
+        src: '~/assets/images/inversiones-io-gray-logo.png',
+        alt: 'Inversiones.io',
+      },
+    ]}
+    classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12'}}
   />
 </Layout>
