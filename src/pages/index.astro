@@ -14,7 +14,7 @@ import Content2 from '~/components/widgets/Content2.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
 import Brands from '~/components/widgets/Brands.astro';
-import Team from '~/components/widgets/Team.astro';
+// import Team from '~/components/widgets/Team.astro';
 
 const metadata = {
   title: 'Qompa - Ni Banco Ni Fintech, tu qompañero financiero',
@@ -72,14 +72,15 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content2>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
+    id="about"
     title="¿Por qué usar Qompa?"
     tagline="Brindamos información basada en datos, herramientas fáciles de usar y productos personalizados para ayudar a las empresas a prosperar."
-    classes={{ container: 'px-0 py-6 md:py-8 lg:py-12'}}
+    classes={{ container: 'px-0 py-6 md:py-8 lg:py-12' }}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -114,8 +115,8 @@ const metadata = {
             description: 'Consultas personalizadas con el asistente de inteligencia artificial Qompa',
           },
           {
-            description: 'Configura tus alertas de pago'
-          }
+            description: 'Configura tus alertas de pago',
+          },
         ],
         callToAction: {
           target: '_self',
@@ -132,8 +133,8 @@ const metadata = {
         disclaimer: {
           cardColor: 'bg-yellow',
           title: 'Próximamente',
-          text: 'Pronto descubrirás más beneficios de nuestro plan regular, junto con nuevas funcionalidades para impulsar el crecimiento de tu negocio.'
-        }        
+          text: 'Pronto descubrirás más beneficios de nuestro plan regular, junto con nuevas funcionalidades para impulsar el crecimiento de tu negocio.',
+        },
       },
       {
         title: 'Premium',
@@ -142,8 +143,8 @@ const metadata = {
         disclaimer: {
           cardColor: 'bg-pink',
           title: 'Próximamente',
-          text: 'Nuestro plan premium maximiza el uso de nuestra inteligencia artificial, analizando tus datos y brindándote información clave para tomar mejores decisiones en el momento justo.'
-        } 
+          text: 'Nuestro plan premium maximiza el uso de nuestra inteligencia artificial, analizando tus datos y brindándote información clave para tomar mejores decisiones en el momento justo.',
+        },
       },
     ]}
   />
@@ -156,14 +157,17 @@ const metadata = {
       src: '~/assets/images/image-city.png',
       alt: 'City',
     }}
-    classes={{ container: 'dark:bg-orange md:px-6 py-6 md:py-8 lg:py-12'}}
+    classes={{ container: 'dark:bg-orange md:px-6 py-6 md:py-8 lg:py-12' }}
   >
     <Fragment slot="content">
       <h2 class="text-6xl font-heading font-bold tracking-tight dark:text-dark-lime mb-1">
         ¿Cómo nació la<br />idea de Qompa?
       </h2>
       <p class="mt-10 dark:text-dark-lime">
-        A finales del 2023 los fundadores de Inversiones IO, deciden resolver una necesidad que veían en las PYMES de ordenar y mejorar su gestión operativa, porque afectaba negativamente su salud financiera. Así nació Qompa, que impulsada por inteligencia artificial será capaz de brindar soluciones que mejoren el día a día de todas estas empresas.
+        A finales del 2023 los fundadores de Inversiones IO, deciden resolver una necesidad que veían en las PYMES de
+        ordenar y mejorar su gestión operativa, porque afectaba negativamente su salud financiera. Así nació Qompa, que
+        impulsada por inteligencia artificial será capaz de brindar soluciones que mejoren el día a día de todas estas
+        empresas.
       </p>
     </Fragment>
 
@@ -172,7 +176,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-    <!-- <Team
+  <!-- <Team
     title="Conoce a nuestro equipo"
     tagline="Descubre quiénes están transformando la<br/ >manera en la que haces negocios."
     people={[
@@ -251,14 +255,18 @@ const metadata = {
     ]}
   /> -->
 
-
-  <div class="md:hidden relative px-4 text-default mx-auto md:px-6 py-6 md:py-8 lg:py-12">
-    <h3 class="font-bold leading-tighter font-heading text-heading text-6xl md:text-6xl highlight">Tenemos un equipo de<br/>trabajo disruptivo</h3>
-    <p class="xl:text-2xl lg:text-sm mt-5">Descubre quiénes están transformando<br/>la manera en la que haces negocios.</p>
+  <div id="team2" class="md:hidden relative px-4 text-default mx-auto md:px-6 py-6 md:py-8 lg:py-12">
+    <h3 class="font-bold leading-tighter font-heading text-heading text-6xl md:text-6xl highlight">
+      Tenemos un equipo de<br />trabajo disruptivo
+    </h3>
+    <p class="xl:text-2xl lg:text-sm mt-5">
+      Descubre quiénes están transformando<br />la manera en la que haces negocios.
+    </p>
   </div>
   <div class="grid md:grid-cols-5 grid-cols-4 gap-0 content-stretch">
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/simon_vacher.png"
         alt="Simon Vacher"
         layout="cover"
@@ -267,7 +275,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/zoe_lopez.png"
         alt="Zoe Lopez"
         layout="cover"
@@ -276,7 +285,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/luis_espinoza.png"
         alt="Luis Espinoza"
         layout="cover"
@@ -285,7 +295,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/diana_field.png"
         alt="Diana Field"
         layout="cover"
@@ -294,7 +305,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/ciela_ramirez.png"
         alt="Ciela Ramirez"
         layout="cover"
@@ -302,14 +314,19 @@ const metadata = {
         decoding="async"
       />
     </div>
-    <div class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
+    <div id="team" class="md:grid grid-rows-subgrid gap-0 col-span-3 max-h-36 hidden">
       <div class="row-start-2 text-center content-center">
-        <h3 class="font-heading xl:text-9xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">Tenemos un equipo de<br/>trabajo disruptivo</h3>
-        <p class="xl:text-2xl lg:text-sm text-xs px-3">Descubre quiénes están transformando la manera en la que haces negocios</p>
+        <h3 class="font-heading xl:text-9xl lg:text-5xl md:text-3xl text-xl p-3 leading-tight">
+          Tenemos un equipo de<br />trabajo disruptivo
+        </h3>
+        <p class="xl:text-2xl lg:text-sm text-xs px-3">
+          Descubre quiénes están transformando la manera en la que haces negocios
+        </p>
       </div>
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/diego_gutierrez.png"
         alt="Diego Gutierrez"
         layout="cover"
@@ -318,7 +335,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/sergio_yap.png"
         alt="Sergio Yap"
         layout="cover"
@@ -327,7 +345,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/luis_quinones.png"
         alt="Luis Quinones"
         layout="cover"
@@ -336,7 +355,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/facundo_marino.png"
         alt="Facundo Marino"
         layout="cover"
@@ -345,7 +365,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/manuel.png"
         alt="Manuel"
         layout="cover"
@@ -354,7 +375,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/chile.png"
         alt="Chile"
         layout="cover"
@@ -363,7 +385,8 @@ const metadata = {
       />
     </div>
     <div>
-      <Image class="w-full object-none aspect-square"
+      <Image
+        class="w-full object-none aspect-square"
         src="~/assets/images/franchesco_uccelli.png"
         alt="Franchesco Uccelli"
         layout="cover"
@@ -396,6 +419,6 @@ const metadata = {
         alt: 'Inversiones.io',
       },
     ]}
-    classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12'}}
+    classes={{ container: 'md:px-6 py-6 md:py-8 lg:py-12' }}
   />
 </Layout>

@@ -38,7 +38,7 @@ export const footerData = {
     },
     {
       title: '',
-      links: [{ text: 'Nosotros', href: getPermalink('/#team') }],
+      links: [{ text: 'Nosotros', href: getPermalink('/#team2') }],
     },
   ],
   secondaryLinks: [
