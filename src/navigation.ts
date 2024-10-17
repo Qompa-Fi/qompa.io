@@ -30,15 +30,11 @@ export const footerData = {
   links: [
     {
       title: '',
-      links: [{ text: '¿Qué ofrece Qompa?', href: getPermalink('/#about') }],
-    },
-    {
-      title: '',
-      links: [{ text: 'Nuestros planes', href: getPermalink('/#pricing') }],
-    },
-    {
-      title: '',
-      links: [{ text: 'Nosotros', href: getPermalink('/#team2') }],
+      links: [
+        { text: '¿Qué ofrece Qompa?', href: getPermalink('/#about') },
+        { text: 'Nuestros planes', href: getPermalink('/#pricing') },
+        { text: 'Nosotros', href: getPermalink('/#team2') },
+      ],
     },
   ],
   secondaryLinks: [
@@ -46,10 +42,14 @@ export const footerData = {
     // { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/qompa' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/qompaio' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-linkedin', href: 'https://www.facebook.com/qompaio' },
+    {
+      ariaLabel: 'Instagram',
+      icon: 'tabler:brand-instagram',
+      href: 'https://www.instagram.com/qompa.io?igsh=M2g2bDdra24ydjc5',
+    },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/Qompa-Fi' },
+    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/qompa' },
   ],
   footNote: ``,
 };

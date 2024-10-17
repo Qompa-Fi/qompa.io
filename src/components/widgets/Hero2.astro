@@ -57,10 +57,6 @@ const {
               </div>
             )
           }
-          <!-- <div class="pt-10 space-y-6 m-auto">
-            <span class="text-dark-lime font-bold hover:text-lime-200 block">Supervisados por</span>
-            <SBS width={200} height={50} />
-          </div> -->
         </div>
         {content && <Fragment set:html={content} />}
       </div>
@@ -91,6 +87,18 @@ const {
             </div>
           )
         }
+        <div>
+          <Image
+            class="relative ml-auto hidden md:block md:mr-16 lg:mr-0 xl:mr-12 rounded-md"
+            widths={[400, 768, 1024, 2040]}
+            sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+            loading="eager"
+            width={80}
+            height={80}
+            src="~/assets/images/q-btn.png"
+            alt="Qompa"
+          />
+        </div>
       </div>
     </div>
   </div>
