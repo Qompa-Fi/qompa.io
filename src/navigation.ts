@@ -18,7 +18,7 @@ export const headerData = {
   actions: [
     {
       text: 'Regístrate',
-      href: 'https://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa',
+      href: 'http://47571431.hs-sites.com/es-pe/qompa-reg%C3%ADstrate-y-transforma-las-finanzas-de-tu-empresa-1-0-0',
       target: '_self',
       variant: 'primary',
     },
