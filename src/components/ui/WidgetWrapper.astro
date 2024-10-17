@@ -20,12 +20,7 @@ const WrapperTag = as;
       {bg ? <Fragment set:html={bg} /> : <Background isDark={isDark} />}
     </slot>
   </div>
-  <div
-    class:list={[
-      twMerge('relative mx-auto px-4 text-default', containerClass),
-      { dark: isDark },
-    ]}
-  >
+  <div class:list={[twMerge('relative mx-auto px-4 text-default', containerClass), { dark: isDark }]}>
     <slot />
   </div>
 </WrapperTag>

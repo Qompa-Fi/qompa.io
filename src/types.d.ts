@@ -154,7 +154,7 @@ export interface Price {
   description?: string;
   price?: number | string;
   oldPrice?: number | string;
-  disclaimer?: Disclaimer;
+  disclaimer?: Callout;
   period?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
@@ -198,7 +198,7 @@ export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface Disclaimer extends Omit<HTMLAttributes<'a'>, 'slot'> {
+export interface Callout extends Omit<HTMLAttributes<'a'>, 'slot'> {
   text: string;
   cardColor?: string;
   title: string;
