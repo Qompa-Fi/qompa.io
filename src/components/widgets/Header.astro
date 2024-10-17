@@ -71,11 +71,26 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'col-span-1 flex justify-between']}>
-      <a class="flex items-center" href={getHomePermalink()}>
+      <a class="md:flex items-center hidden" href={getHomePermalink()}>
         <!-- <Logo /> -->
-        <Image src="~/assets/images/qompa-text.png" alt="App Store Image" width={100} />
+        <Image src="~/assets/images/qompa-text.png" alt="Qompa" width={100} />
+      </a>
+      <a class="flex items-center md:hidden" href={getHomePermalink()}>
+        <!-- <Logo /> -->
+        <Image src="~/assets/images/q-logo.png" alt="Qompa" width={36} />
       </a>
       <div class="flex items-center md:hidden">
+        {
+          actions?.length ? (
+            <span class="ml-4 rtl:ml-0 rtl:mr-4">
+              {actions.map((btnProps) => (
+                <Button {...btnProps} class="mr-2 rounded-lg py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
+              ))}
+            </span>
+          ) : (
+            ''
+          )
+        }
         <ToggleMenu />
       </div>
     </div>
