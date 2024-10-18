@@ -42,7 +42,7 @@ export const footerData = {
     // { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-linkedin', href: 'https://www.facebook.com/qompaio' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/qompaio' },
     {
       ariaLabel: 'Instagram',
       icon: 'tabler:brand-instagram',
