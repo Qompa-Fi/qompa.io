@@ -18,7 +18,7 @@ export const headerData = {
   actions: [
     {
       text: 'Regístrate',
-      href: 'https://waitlist.qompa.io',
+      href: 'https://registrate.qompa.io',
       target: '_self',
       variant: 'primary',
     },
