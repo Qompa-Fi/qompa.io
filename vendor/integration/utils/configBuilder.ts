@@ -82,7 +82,7 @@ export interface UIConfig {
   theme: string;
 }
 
-const DEFAULT_SITE_NAME = 'Website';
+const DEFAULT_SITE_NAME = 'Qompa.io';
 
 const getSite = (config: Config) => {
   const _default = {
@@ -120,7 +120,7 @@ const getMetadata = (config: Config) => {
 
 const getI18N = (config: Config) => {
   const _default = {
-    language: 'en',
+    language: 'es',
     textDirection: 'ltr',
   };
 
