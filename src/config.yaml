@@ -11,7 +11,7 @@ metadata:
   title:
     default: Qompa
     template: '%s — Qompa'
-  description: "\U0001F680 The first bank for small and medium companies in Perú 🇵🇪🏦"
+  description: "Transformamos a las empresas con soluciones financieras innovadoras basadas en Inteligencia Artificial"
   robots:
     index: true
     follow: true
@@ -22,10 +22,10 @@ metadata:
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+  # twitter:
+  #   handle: '@onwidget'
+  #   site: '@onwidget'
+  #   cardType: summary_large_image
 
 i18n:
   language: es
