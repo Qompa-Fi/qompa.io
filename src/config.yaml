@@ -67,6 +67,8 @@ analytics:
   vendors:
     googleAnalytics:
       id: 'G-KL3CGBG84Q' # or "G-XXXXXXXXXX"
+    facebookPixel:
+      id: '818276990270615'
 
 ui:
   theme: 'dark:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

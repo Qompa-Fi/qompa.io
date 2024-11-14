@@ -1,5 +1,6 @@
 ---
 import { GoogleAnalytics } from '@astrolib/analytics';
+import FacebookPixel from '../common/FacebookPixel.astro';
 import { ANALYTICS } from 'astrowind:config';
 ---
 
@@ -8,6 +9,14 @@ import { ANALYTICS } from 'astrowind:config';
     <GoogleAnalytics
       id={String(ANALYTICS.vendors.googleAnalytics.id)}
       partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown}
+    />
+  ) : null
+}
+
+{
+  ANALYTICS?.vendors?.googleAnalytics?.id ? (
+    <FacebookPixel
+      id={String(ANALYTICS.vendors.facebookPixel.id)}
     />
   ) : null
 }

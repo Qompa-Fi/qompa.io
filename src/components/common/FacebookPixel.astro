@@ -1,0 +1,30 @@
+---
+// import ShowIf from './ShowIf.astro';
+
+export interface Props {
+  id: string;
+  partytown?: boolean;
+}
+
+const { id = "" } = Astro.props;
+
+---
+
+{/* <ShowIf id={id}> */}
+<noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=818276990270615&ev=PageView&noscript=1"
+    /></noscript>
+<script is:inline async src={`https://connect.facebook.net/en_US/fbevents.js`}></script>
+
+<script is:inline define:vars={{ id }}>
+  window.dataLayer = window.dataLayer || [];
+  function fbq() {
+    window.dataLayer.push(arguments);
+  }
+  fbq("init", "818276990270615");
+  fbq("track", "PageView");
+</script>
+{/* </ShowIf> */}
+
+
+<!-- Meta Pixel Code -->
