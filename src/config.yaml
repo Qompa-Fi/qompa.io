@@ -11,7 +11,7 @@ metadata:
   title:
     default: Qompa
     template: '%s — Qompa'
-  description: "Transformamos a las empresas con soluciones financieras innovadoras basadas en Inteligencia Artificial"
+  description: 'Transformamos a las empresas con soluciones financieras innovadoras basadas en Inteligencia Artificial'
   robots:
     index: true
     follow: true

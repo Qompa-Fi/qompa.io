@@ -13,23 +13,23 @@ Utilizamos sus datos personales para proporcionar y mejorar el Servicio. Al util
 
 **1\. Introducción**
 
-En Qompa, valoramos la privacidad de nuestros usuarios y nos comprometemos a proteger sus datos personales. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos la información que recopilamos a través de nuestra aplicación.  
+En Qompa, valoramos la privacidad de nuestros usuarios y nos comprometemos a proteger sus datos personales. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos la información que recopilamos a través de nuestra aplicación.
 
 **2\. Datos que recopilamos**
 
 Recopilamos los siguientes tipos de datos personales:
 
-* **Información de registro:** Nombre, correo electrónico, ubicación, información de la empresa.  
-* **Datos de uso:** Historial de uso de la aplicación, interacciones con las funcionalidades, vínculos de cuentas.  
-* **Información financiera:** Datos de pago y transacciones.
+- **Información de registro:** Nombre, correo electrónico, ubicación, información de la empresa.
+- **Datos de uso:** Historial de uso de la aplicación, interacciones con las funcionalidades, vínculos de cuentas.
+- **Información financiera:** Datos de pago y transacciones.
 
 **3\. Cómo utilizamos tus datos**
 
 Utilizamos tus datos para:
 
-* **Personalizar tu experiencia:** Ofrecerte funcionalidades y contenido relevante.  
-* **Mejorar nuestros servicios:** Analizar el uso de la aplicación para identificar áreas de mejora.  
-* **Brindar soporte:** Responder a tus consultas y solicitudes.
+- **Personalizar tu experiencia:** Ofrecerte funcionalidades y contenido relevante.
+- **Mejorar nuestros servicios:** Analizar el uso de la aplicación para identificar áreas de mejora.
+- **Brindar soporte:** Responder a tus consultas y solicitudes.
 
 **4\. ¿Compartimos tus datos?**
 
@@ -39,17 +39,17 @@ No compartimos tus datos personales con terceros, excepto cuando sea necesario p
 
 Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos personales de acceso no autorizado, alteración, divulgación o destrucción. Estas medidas incluyen:
 
-* **Encriptación:** Tus datos se encriptan para proteger su confidencialidad.  
-* **Autenticación:** Utilizamos sistemas de autenticación de dos factores para proteger tu cuenta.  
-* **Alertas:** Te notificaremos por correo electrónico en caso de una brecha de seguridad que pueda afectar tus datos personales.
+- **Encriptación:** Tus datos se encriptan para proteger su confidencialidad.
+- **Autenticación:** Utilizamos sistemas de autenticación de dos factores para proteger tu cuenta.
+- **Alertas:** Te notificaremos por correo electrónico en caso de una brecha de seguridad que pueda afectar tus datos personales.
 
 **6\. Tus derechos**
 
 Tienes derecho a:
 
-* **Acceder:** Consultar los datos personales que tenemos sobre ti.  
-* **Rectificar:** Corregir cualquier dato personal inexacto.  
-* **Suprimir:** Solicitar la eliminación de tus datos personales.
+- **Acceder:** Consultar los datos personales que tenemos sobre ti.
+- **Rectificar:** Corregir cualquier dato personal inexacto.
+- **Suprimir:** Solicitar la eliminación de tus datos personales.
 
 Para ejercer estos derechos, puedes comunicarte con nosotros a través del chat de la aplicación.
 
