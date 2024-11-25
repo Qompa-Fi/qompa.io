@@ -18,8 +18,14 @@ import Favicons from '~/components/Favicons.astro';
       <div class="absolute top-5 text-[18px] flex flex-row items-center justify-center gap-6 leading-tight">
         <div class="max-w-[20%]">
           <svg width="55" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.33301 19.334C3.33301 10.4974 10.4965 3.33398 19.333 3.33398H44.6663C53.5029 3.33398 60.6663 10.4974 60.6663 19.334V44.6673C60.6663 53.5039 53.5029 60.6673 44.6663 60.6673H19.333C10.4965 60.6673 3.33301 53.5039 3.33301 44.6673V19.334Z" fill="#B7E400"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9993 11.917C32.5298 11.917 33.0385 12.1277 33.4136 12.5028L46.7469 25.8361C47.5279 26.6172 47.5279 27.8835 46.7469 28.6645C45.9658 29.4456 44.6995 29.4456 43.9185 28.6645L33.9993 18.7454V50.1075C33.9993 51.212 33.1039 52.1075 31.9993 52.1075C30.8948 52.1075 29.9993 51.212 29.9993 50.1075V18.7454L20.0802 28.6645C19.2992 29.4456 18.0329 29.4456 17.2518 28.6645C16.4708 27.8835 16.4708 26.6172 17.2518 25.8361L30.5851 12.5028C30.9602 12.1277 31.4689 11.917 31.9993 11.917Z" fill="#083433"/>
+            <path
+              d="M3.33301 19.334C3.33301 10.4974 10.4965 3.33398 19.333 3.33398H44.6663C53.5029 3.33398 60.6663 10.4974 60.6663 19.334V44.6673C60.6663 53.5039 53.5029 60.6673 44.6663 60.6673H19.333C10.4965 60.6673 3.33301 53.5039 3.33301 44.6673V19.334Z"
+              fill="#B7E400"></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M31.9993 11.917C32.5298 11.917 33.0385 12.1277 33.4136 12.5028L46.7469 25.8361C47.5279 26.6172 47.5279 27.8835 46.7469 28.6645C45.9658 29.4456 44.6995 29.4456 43.9185 28.6645L33.9993 18.7454V50.1075C33.9993 51.212 33.1039 52.1075 31.9993 52.1075C30.8948 52.1075 29.9993 51.212 29.9993 50.1075V18.7454L20.0802 28.6645C19.2992 29.4456 18.0329 29.4456 17.2518 28.6645C16.4708 27.8835 16.4708 26.6172 17.2518 25.8361L30.5851 12.5028C30.9602 12.1277 31.4689 11.917 31.9993 11.917Z"
+              fill="#083433"></path>
           </svg>
         </div>
 
@@ -31,12 +37,13 @@ import Favicons from '~/components/Favicons.astro';
       <div class="flex flex-col items-center justify-center gap-8 mb-20">
         <Image width={220} height={150} src="~/assets/images/ship.webp" alt="ship" />
 
-        <h1 class="font-heading text-[64px] text-[#083433] text-center leading-none tracking-normal" style={{ fontFamily: 'MDNichrome' }}>
+        <h1
+          class="font-heading text-[64px] text-[#083433] text-center leading-none tracking-normal"
+          style={{ fontFamily: 'MDNichrome' }}
+        >
           Completa tu registro en la APP Qompa.
         </h1>
       </div>
     </main>
   </body>
 </html>
-
-

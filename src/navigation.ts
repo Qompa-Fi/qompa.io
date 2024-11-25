@@ -39,7 +39,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     // { text: 'Terms', href: getPermalink('/terms') },
-    // { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Políticas de privacidad', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/qompaio' },

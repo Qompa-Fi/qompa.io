@@ -13,10 +13,4 @@ import { ANALYTICS } from 'astrowind:config';
   ) : null
 }
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <FacebookPixel
-      id={String(ANALYTICS.vendors.facebookPixel.id)}
-    />
-  ) : null
-}
+{ANALYTICS?.vendors?.googleAnalytics?.id ? <FacebookPixel id={String(ANALYTICS.vendors.facebookPixel.id)} /> : null}
