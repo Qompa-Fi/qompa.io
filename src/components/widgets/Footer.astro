@@ -24,7 +24,7 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], links = [], theme = 'dark' } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], theme = 'dark' } = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t dark:border-gray-200 border-slate-800 not-prose']}>
@@ -89,7 +89,19 @@ const { socialLinks = [], links = [], theme = 'dark' } = Astro.props;
   </div>
   <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative min-h-3 p-4 lg:px-12 sm:px-6 bg-dark-lime text-lime">
     <div class="flex flex-col md:col-span-3 items-center md:items-start py-6 md:py-8">
-      <h4 class="font-semibold mt-2 mb-6">Términos y condiciones</h4>
+      <ul class="md:flex content-around">
+        {secondaryLinks.map(({ text, href, ariaLabel }) => (
+          <li class="mb-3">
+            <a
+              class="text-muted hover:text-gray-700 hover:underline dark:text-lime transition duration-150 ease-in-out"
+              href={href}
+              aria-label={ariaLabel}
+            >
+              <Fragment set:html={text} />
+            </a>
+          </li>
+        ))}
+      </ul>
       <p class="text-xs text-center md:text-left">
         Los términos que regulan la relación entre Qompa con sus usuarios, con sus colaboradores, con sus proveedores u
         otros contratistas, con sus accionistas, con sus miembros de órganos de gobierno corporativo, con sus acreedores
