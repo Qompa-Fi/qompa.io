@@ -4,12 +4,6 @@ import FacebookPixel from '../common/FacebookPixel.astro';
 import { ANALYTICS } from 'astrowind:config';
 ---
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics
-      id={String(ANALYTICS.vendors.googleAnalytics.id)}
-    />
-  ) : null
-}
+{ANALYTICS?.vendors?.googleAnalytics?.id ? <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} /> : null}
 
 {ANALYTICS?.vendors?.googleAnalytics?.id ? <FacebookPixel id={String(ANALYTICS.vendors.facebookPixel.id)} /> : null}
