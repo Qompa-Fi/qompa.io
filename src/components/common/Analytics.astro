@@ -1,16 +1,9 @@
 ---
-import { GoogleAnalytics } from '@astrolib/analytics';
+import GoogleAnalytics from '../common/GoogleAnalytics.astro';
 import FacebookPixel from '../common/FacebookPixel.astro';
 import { ANALYTICS } from 'astrowind:config';
 ---
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics
-      id={String(ANALYTICS.vendors.googleAnalytics.id)}
-      partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown}
-    />
-  ) : null
-}
+{ANALYTICS?.vendors?.googleAnalytics?.id ? <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} /> : null}
 
 {ANALYTICS?.vendors?.googleAnalytics?.id ? <FacebookPixel id={String(ANALYTICS.vendors.facebookPixel.id)} /> : null}
