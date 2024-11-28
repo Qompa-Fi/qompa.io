@@ -1,0 +1,24 @@
+---
+// import ShowIf from './ShowIf.astro';
+
+export interface Props {
+  id: string;
+  partytown?: boolean;
+}
+
+const { id = '' } = Astro.props;
+---
+
+{/* <ShowIf id={id}> */}
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=G-KL3CGBG84Q`}></script>
+<script is:inline define:vars={{ id }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-KL3CGBG84Q");
+</script>
+{/* </ShowIf> */}
+
+<!-- Meta Pixel Code -->
