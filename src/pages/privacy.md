@@ -61,4 +61,4 @@ Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremo
 
 Si tienes alguna pregunta sobre esta Política de Privacidad, puedes contactarnos a través del chat de la aplicación.
 
-- By email: contacto@qompa.io
+- By email: hola@qompa.io
