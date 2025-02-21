@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "VA898Z5HA9.com.qompa.app",
+        "paths": [
+          "/onboarding/*"
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": ["VA898Z5HA9.com.qompa.app"]
+  },
+  "webcredentials": {
+    "apps": ["VA898Z5HA9.com.qompa.app"]
+  }
+}
