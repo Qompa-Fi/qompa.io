@@ -1,5 +1,5 @@
 site:
-  name: Qompa
+  name: 
   site: 'https://qompa.io'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Qompa
-    template: '%s — Qompa'
-  description: 'Transformamos a las empresas con soluciones financieras innovadoras basadas en Inteligencia Artificial'
+    default: 
+    template: '%s — '
+  description: ''
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Qompa
+    site_name: 
     images:
       - url: '~/assets/images/default.png'
         width: 1200
