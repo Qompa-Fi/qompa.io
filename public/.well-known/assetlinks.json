@@ -1,14 +1,11 @@
 [
-    {
-      "relation": [
-        "delegate_permission/common.handle_all_urls"
-      ],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.qompa.app",
-        "sha256_cert_fingerprints": [
-          "CF:0A:CA:8B:CC:26:0A:D9:1B:7D:D3:78:73:95:2F:3A:5A:A8:8A:3E:D1:B7:19:08:C8:17:34:93:33:25:6F:0B"
-        ]
-      }
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.qompa.app",
+      "sha256_cert_fingerprints":
+        ["CF:0A:CA:8B:CC:26:0A:D9:1B:7D:D3:78:73:95:2F:3A:5A:A8:8A:3E:D1:B7:19:08:C8:17:34:93:33:25:6F:0B"]
     }
-  ]
+  }
+]
