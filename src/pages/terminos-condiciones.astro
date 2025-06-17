@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import PdfViewer from '~/components/common/PdfViewer.astro';
+
+import type { MetaData } from '~/types';
+
+const metadata: MetaData = {
+  title: 'Términos y Condiciones',
+  description: 'Términos y condiciones de uso de Qompa',
+};
+---
+
+<Layout metadata={metadata}>
+  <main class="min-h-screen bg-white">
+    <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+      <div class="text-center mb-8">
+        <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter text-gray-900 mb-4">
+          Términos y Condiciones
+        </h1>
+      </div>
+      
+      <PdfViewer
+        title="Documento de Términos y Condiciones"
+        pdfUrl="/terminos-condiciones.pdf"
+        downloadFileName="terminos-condiciones-qompa.pdf"
+        showFullscreen={true}
+        showDownload={true}
+        height="80vh"
+      />
+      
+    
+    </section>
+  </main>
+</Layout>
+
+
+<style>
+  /* Custom styles for better PDF viewing experience */
+  iframe {
+    background: #f8f9fa;
+  }
+  
+  /* Fullscreen styles */
+  iframe:fullscreen {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  iframe:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  iframe:-ms-fullscreen {
+    width: 100vw;
+    height: 100vh;
+  }
+</style> 

@@ -1,0 +1,200 @@
+---
+export interface Props {
+  title?: string;
+  pdfUrl: string;
+  height?: string;
+  maxWidth?: string;
+}
+
+const {
+  title = 'Términos y Condiciones',
+  pdfUrl,
+  height = 'calc(100vh - 100px)',
+  maxWidth = '900px',
+} = Astro.props;
+---
+
+<div class="pdf-container w-full flex flex-col items-center justify-start bg-white">
+  <div class="w-full flex justify-center items-center" style={`max-width: ${maxWidth}; height: ${height};`}>
+    <div class="pdf-wrapper w-full h-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div id="pdf-viewer" class="pdf-viewer w-full h-full bg-white overflow-auto">
+        <div id="pdf-loading" class="flex items-center justify-center h-full">
+          <div class="text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-lime-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">Cargando PDF...</p>
+          </div>
+        </div>
+        <div id="pdf-error" class="hidden flex items-center justify-center h-full">
+          <div class="text-center p-8">
+            <p class="text-red-600 mb-4">Error al cargar el PDF</p>
+            <a href={pdfUrl} target="_blank" class="text-lime-600 hover:text-lime-700 underline">
+              Haga clic aquí para abrir el documento
+            </a>
+          </div>
+        </div>
+        <div id="pdf-pages" class="hidden flex flex-col items-center gap-4 p-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ pdfUrl }}>
+  // Cargar PDF.js dinámicamente
+  async function loadPDFJS() {
+    try {
+      const pdfjsLib = await import('/pdfjs/pdf.min.mjs');
+      
+      // Configurar el worker de PDF.js
+      pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdfjs/pdf.worker.min.mjs';
+      
+      return pdfjsLib;
+    } catch (error) {
+      console.error('Error loading PDF.js:', error);
+      return null;
+    }
+  }
+  
+  let currentPdf = null;
+  
+  async function loadPDF(pdfUrl) {
+    try {
+      const loadingDiv = document.getElementById('pdf-loading');
+      const errorDiv = document.getElementById('pdf-error');
+      const pagesDiv = document.getElementById('pdf-pages');
+      
+      // Mostrar loading
+      loadingDiv.classList.remove('hidden');
+      errorDiv.classList.add('hidden');
+      pagesDiv.classList.add('hidden');
+      
+      // Cargar PDF.js
+      const pdfjsLib = await loadPDFJS();
+      if (!pdfjsLib) {
+        throw new Error('No se pudo cargar PDF.js');
+      }
+      
+      // Cargar el PDF
+      const loadingTask = pdfjsLib.getDocument(pdfUrl);
+      currentPdf = await loadingTask.promise;
+      const totalPages = currentPdf.numPages;
+      
+      // Renderizar todas las páginas
+      await renderAllPages(totalPages, pdfjsLib);
+      
+      // Ocultar loading y mostrar páginas
+      loadingDiv.classList.add('hidden');
+      pagesDiv.classList.remove('hidden');
+      
+    } catch (error) {
+      console.error('Error loading PDF:', error);
+      document.getElementById('pdf-loading').classList.add('hidden');
+      document.getElementById('pdf-error').classList.remove('hidden');
+    }
+  }
+  
+  async function renderAllPages(totalPages, pdfjsLib) {
+    const pagesDiv = document.getElementById('pdf-pages');
+    pagesDiv.innerHTML = ''; // Limpiar contenido anterior
+    
+    for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+      try {
+        // Crear contenedor para la página
+        const pageContainer = document.createElement('div');
+        pageContainer.className = 'page-container bg-white border border-gray-200 rounded-lg shadow-sm';
+        
+        // Crear canvas para la página
+        const canvas = document.createElement('canvas');
+        canvas.className = 'pdf-page-canvas';
+        canvas.style.maxWidth = '100%';
+        canvas.style.height = 'auto';
+        
+        // Agregar número de página
+        const pageNumber = document.createElement('div');
+        pageNumber.className = 'text-center text-sm text-gray-500 py-2';
+        pageNumber.textContent = `Página ${pageNum} de ${totalPages}`;
+        
+        pageContainer.appendChild(pageNumber);
+        pageContainer.appendChild(canvas);
+        pagesDiv.appendChild(pageContainer);
+        
+        // Renderizar la página
+        await renderPage(pageNum, canvas, pdfjsLib);
+        
+      } catch (error) {
+        console.error(`Error rendering page ${pageNum}:`, error);
+      }
+    }
+  }
+  
+  async function renderPage(pageNumber, canvas, pdfjsLib) {
+    if (!currentPdf) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Obtener la página
+    const page = await currentPdf.getPage(pageNumber);
+    
+    // Calcular el viewport con escala apropiada
+    const viewport = page.getViewport({ scale: 1.2 });
+    
+    // Configurar el canvas
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    
+    // Renderizar la página
+    const renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+    
+    await page.render(renderContext).promise;
+  }
+  
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    if (pdfUrl) {
+      loadPDF(pdfUrl);
+    }
+  });
+</script>
+
+<style>
+.pdf-container {
+  min-height: 400px;
+}
+
+.pdf-wrapper {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.pdf-viewer {
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.page-container {
+  margin-bottom: 1rem;
+}
+
+.pdf-page-canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .pdf-container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pdf-viewer {
+    min-width: 0;
+  }
+  
+  .pdf-page-canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+</style> 
